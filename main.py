@@ -2,21 +2,27 @@ import copycat
 
 while True:
 	print('----------------MENU---------------')
-	print('| 1. rec                          |')
-	print('| 2. train                        |')
-	print('| 3. sim                          |')
-	print('| 4. exit                         |')
+	print('| 1. record dataset                ')
+	print('| 2. train model                   ')
+	print('| 3. run                           ')
+	print('| 4. get input                     ')
+	print('| 5. set input                     ')
+	print('| 0. exit                          ')
 	print('-----------------------------------')
 
 	command = input('input:')
 
-	if command == 'rec' or command == '1':
+	if command == '1':
 		copycat.record()
-	elif command == 'train' or command == '2':
+	elif command == '2':
 		copycat.train()
-	elif command == 'sim' or command == '3':
-		copycat.simulate()
-	elif command == 'exit' or command == '4':
+	elif command == '3':
+		copycat.run()
+	elif command == '4':
+		copycat.get_input()
+	elif command == '5':
+		copycat.set_input()
+	elif command == '0':
 		break
 	else:
 		print('Unkown Command')
