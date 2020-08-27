@@ -123,17 +123,14 @@ def train():
 
 	model.add(ConvLSTM2D(filters=40, kernel_size=(3, 3), input_shape=input_shape, padding='same', return_sequences=True))
 	model.add(BatchNormalization())
-	model.add(Dropout(0.2))
 	model.add(MaxPooling3D(pool_size=(2, 2, 2), padding='same'))
 
 	model.add(ConvLSTM2D(filters=40, kernel_size=(3, 3), padding='same', return_sequences=True))
 	model.add(BatchNormalization())
-	model.add(Dropout(0.3))
 	model.add(MaxPooling3D(pool_size=(2, 2, 2), padding='same'))
 
 	model.add(ConvLSTM2D(filters=40, kernel_size=(3, 3), padding='same', return_sequences=False))
 	model.add(BatchNormalization())
-	model.add(Dropout(0.4))
 
 	model.add(Flatten())
 
